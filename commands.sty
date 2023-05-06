@@ -1,0 +1,35 @@
+\ProvidesPackage{commands}
+
+\RequirePackage{amsmath}                        % 更多數學語法 ex. \dfrac{}{}
+\RequirePackage{amsfonts}                       % Mathbb
+\RequirePackage{amssymb}                        % QED
+\RequirePackage{pgfplots}
+\RequirePackage{graphicx}
+
+% 自定義 QED
+\def\qed{\;{}_{{}_{\blacksquare}}}
+\def\QED{\;{}_{{}_{\blacksquare}}}              % old version
+
+\def\br{ \\ \hspace*{\fill} \\ }
+\def\wei{ \text{$>$ K.Wei} }
+\def\alan{ \text{$>$ Alan} }
+\def\johnny{ \text{$>$ J$\phi$hnny} }
+\def\liu{ \text{$>$ Sparky} }
+\def\sol{ \textbf{SOLUTION} }
+\def\br{ $\\ \hspace*{\fill} \\$ }
+\def\lines{ \\\\ \noindent\rule{\textwidth}{0.4pt} \\\\ }
+\newcommand{\qn}[1]{
+    \boxed{\#\, \text{#1}}
+}
+
+\newcommand{\qns}[1]{
+    \hfill \scalebox{0.5}{
+        #1
+    }
+}
+
+\newcommand{\myquad}[1][1]{
+    \hspace*{#1em}\ignorespaces
+}
+
+\endinput

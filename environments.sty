@@ -1,0 +1,130 @@
+\ProvidesPackage{environments}
+
+\RequirePackage{array}
+\RequirePackage{tikz-qtree,tikz-qtree-compat}
+\RequirePackage[most]{tcolorbox}                % solbox
+
+% Environment Description Box 填充題 BOX
+\newenvironment{bfqdesbox}[3]{      % Part #1, #2 questions, #3 pt. in total
+    \begin{tcolorbox}[
+        colback = white!5!white,
+        colframe = black!75!black, 
+        arc = 0mm,
+        boxrule = 0.2mm,
+        boxsep = 2 mm
+    ]
+    % \begin{minipage}{\linewidth}
+    \begin{minipage}{\dimexpr\columnwidth-2\fboxsep\relax}
+        \large \textbf{Part #1 - Blank Filling Questions} \\
+        \footnotesize ( #2 questions, #3 points in total ) \\
+        \footnotesize Please write down the question number and the answer \textbf{only}.
+} {
+    \end{minipage}\end{tcolorbox}
+}
+
+% Environment Description Box 計算題 BOX
+\newenvironment{pacdesbox}[3]{      % Part #1, #2 questions, #3 pt. in total
+    \begin{tcolorbox}[
+        colback = white!5!white,
+        colframe = black!75!black, 
+        arc = 0mm,
+        boxrule = 0.2mm,
+        boxsep = 2 mm
+    ]
+    % \begin{minipage}{\linewidth}
+    \begin{minipage}{\dimexpr\columnwidth-2\fboxsep\relax}
+        \large \textbf{Part #1 - Proof and Calculation} \\
+        \footnotesize ( #2 questions, #3 points in total ) \\
+        \footnotesize Answer the problems as thoroughly as possible. Be sure to include all your work. Partial credits will be given even if the answer is not fully correct.
+} {
+    \end{minipage}\end{tcolorbox}
+}
+
+% Environment Description Box 選擇題 BOX
+\newenvironment{mcqdesbox}[3]{      % Part #1, #2 questions, #3 pt. in total
+    \begin{tcolorbox}[
+        colback = white!5!white,
+        colframe = black!75!black, 
+        arc = 0mm,
+        boxrule = 0.2mm,
+        boxsep = 2 mm
+    ]
+    % \begin{minipage}{\linewidth}
+    \begin{minipage}{\dimexpr\columnwidth-2\fboxsep\relax}
+        \large \textbf{Part #1 - Multiple Choices} \\
+        \footnotesize ( #2 questions, #3 points in total ) \\
+        \footnotesize Please write down the question number and the answer \textbf{only}.
+} {
+    \end{minipage}\end{tcolorbox}
+}
+
+% Environment Description Box 加分題 BOX
+\newenvironment{bonus}[3]{      % Part #1, #2 questions, #3 pt. in total
+    \begin{tcolorbox}[
+        colback = white!5!white,
+        colframe = black!75!black, 
+        arc = 0mm,
+        boxrule = 0.2mm,
+        boxsep = 2 mm
+    ]
+    % \begin{minipage}{\linewidth}
+    \begin{minipage}{\dimexpr\columnwidth-2\fboxsep\relax}
+        \large \textbf{Part #1 - Bonus} \\
+        \footnotesize ( #2 questions, #3 points in total ) \\
+        \footnotesize Answer the problems as thoroughly as possible. Be sure to include all your work. Partial credits will be given even if the answer is not fully correct.
+} {
+    \end{minipage}\end{tcolorbox}
+}
+
+\newenvironment{desbox}{
+    \begin{tcolorbox}[
+        colback = white!5!white,
+        colframe = black!75!black, 
+        arc = 0mm,
+        boxrule = 0.2mm,
+        boxsep = 2 mm
+    ]
+    % \begin{minipage}{\linewidth}
+    \begin{minipage}{\dimexpr\columnwidth-2\fboxsep\relax}
+} {
+    \end{minipage}\end{tcolorbox}
+}
+
+% Environment Description Box
+\newenvironment{quebox}{
+    \begin{tcolorbox}[
+        colback = white!5!white,
+        colframe = white!75!white, 
+        arc = 0 mm,
+        boxrule = 0 mm,
+        boxsep = 0 mm
+    ]
+    % \begin{minipage}{\linewidth}
+    \begin{minipage}{\dimexpr\columnwidth-2\fboxsep\relax}
+} {
+    \end{minipage}\end{tcolorbox}
+}
+
+% Environment Solution Box
+\newenvironment{solbox}{
+    \begin{tcolorbox}[
+        colback = white!5!white,
+        colframe = black!75!black, 
+        arc = 0mm,
+        boxrule = 0.2mm,
+        boxsep = 5 mm
+    ]
+    \begin{minipage}{\linewidth}
+    % \begin{minipage}{\dimexpr\columnwidth-2\fboxsep\relax}
+} {
+    \end{minipage}\end{tcolorbox}
+}
+
+% Displaystyle Array
+\newenvironment{disarray}[1]{
+    \begin{array}[t]{*#1 {>{\displaystyle}l}}
+} {
+    \end{array}
+}
+
+\endinput
